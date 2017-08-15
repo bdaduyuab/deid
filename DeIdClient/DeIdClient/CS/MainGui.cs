@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Xml;
 using WTextAnnotator.CS.Controller;
+using WTextAnnotator.CS.Database;
 using WTextAnnotator.CS.Model;
 
 namespace WTextAnnotator
@@ -22,6 +23,8 @@ namespace WTextAnnotator
         public Trie trie;
         public AnnotationList annotationList = new AnnotationList();
         public string text;
+
+        public ArrayList notes;
 
         public MainGui()
         {
@@ -235,10 +238,32 @@ namespace WTextAnnotator
         private void buttonAnnotateWord_Click(object sender, EventArgs e)
         {
             Trie trie = new Trie();
-            trie.addKeyword(textBox1.Text.Trim());
+            trie.addKeyword(textBoxKeyword.Text.Trim());
             trie.finalize();
             ArrayList anns = trie.annotateText(textArea.Text, "PHI");
             annotatePHI(anns);
+        }
+
+        private void buttonLoadPatient_Click(object sender, EventArgs e)
+        {
+            notes=PatientNotes.extractPatient(textBoxPatientId.Text);
+            foreach (PatientNotes note in notes)
+            {
+                comboBoxNotes.Items.Add(note.noteId+" "+note.noteType);
+            }
+            comboBoxNotes.SelectedIndex = 0;
+
+        }
+
+        private void ComboBoxNotes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+            if (comboBoxNotes.SelectedIndex >= 0)
+            {
+                PatientNotes note = (PatientNotes) notes[comboBoxNotes.SelectedIndex];
+                textArea.Text = note.text;
+            }
+            
         }
     }
 }
