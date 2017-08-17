@@ -35,41 +35,43 @@ namespace WTextAnnotator
             this.loadTextButton = new System.Windows.Forms.Button();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.buttonLoadAnnotation = new System.Windows.Forms.Button();
+            this.buttonAnnotationService = new System.Windows.Forms.Button();
+            this.comboBoxNotes = new System.Windows.Forms.ComboBox();
+            this.textBoxPatientId = new System.Windows.Forms.TextBox();
             this.buttonLoadPatient = new System.Windows.Forms.Button();
             this.buttonImportDict = new System.Windows.Forms.Button();
-            this.buttonAnnotateWord = new System.Windows.Forms.Button();
-            this.textBoxKeyword = new System.Windows.Forms.TextBox();
-            this.buttonSort = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.startCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.endCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sourceCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.timeCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.textCol = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBoxPatientId = new System.Windows.Forms.TextBox();
-            this.comboBoxNotes = new System.Windows.Forms.ComboBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.buttonSort = new System.Windows.Forms.Button();
+            this.textBoxKeyword = new System.Windows.Forms.TextBox();
+            this.buttonAnnotateWord = new System.Windows.Forms.Button();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // textArea
             // 
             this.textArea.Dock = System.Windows.Forms.DockStyle.Fill;
             this.textArea.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textArea.Location = new System.Drawing.Point(2, 62);
-            this.textArea.Margin = new System.Windows.Forms.Padding(2);
+            this.textArea.Location = new System.Drawing.Point(3, 95);
             this.textArea.Name = "textArea";
-            this.textArea.Size = new System.Drawing.Size(454, 296);
+            this.textArea.Size = new System.Drawing.Size(1008, 455);
             this.textArea.TabIndex = 0;
             this.textArea.Text = "";
             // 
             // loadTextButton
             // 
-            this.loadTextButton.Location = new System.Drawing.Point(6, 6);
-            this.loadTextButton.Margin = new System.Windows.Forms.Padding(2);
+            this.loadTextButton.Location = new System.Drawing.Point(9, 9);
             this.loadTextButton.Name = "loadTextButton";
-            this.loadTextButton.Size = new System.Drawing.Size(84, 22);
+            this.loadTextButton.Size = new System.Drawing.Size(126, 34);
             this.loadTextButton.TabIndex = 1;
             this.loadTextButton.Text = "Load Text";
             this.loadTextButton.UseVisualStyleBackColor = true;
@@ -78,43 +80,82 @@ namespace WTextAnnotator
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.ColumnCount = 2;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 65F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 35F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.19363F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.80636F));
             this.tableLayoutPanel1.Controls.Add(this.textArea, 0, 1);
             this.tableLayoutPanel1.Controls.Add(this.panel1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.dataGridView1, 1, 1);
+            this.tableLayoutPanel1.Controls.Add(this.panel2, 1, 0);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
-            this.tableLayoutPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 60F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 92F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(706, 318);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(1446, 489);
             this.tableLayoutPanel1.TabIndex = 3;
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.buttonLoadAnnotation);
+            this.panel1.Controls.Add(this.buttonAnnotateWord);
+            this.panel1.Controls.Add(this.textBoxKeyword);
             this.panel1.Controls.Add(this.comboBoxNotes);
             this.panel1.Controls.Add(this.textBoxPatientId);
             this.panel1.Controls.Add(this.buttonLoadPatient);
             this.panel1.Controls.Add(this.buttonImportDict);
-            this.panel1.Controls.Add(this.buttonAnnotateWord);
-            this.panel1.Controls.Add(this.textBoxKeyword);
             this.panel1.Controls.Add(this.loadTextButton);
-            this.panel1.Controls.Add(this.buttonSort);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(2, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2);
+            this.panel1.Location = new System.Drawing.Point(3, 3);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(454, 56);
+            this.panel1.Size = new System.Drawing.Size(1008, 86);
             this.panel1.TabIndex = 1;
+            // 
+            // buttonLoadAnnotation
+            // 
+            this.buttonLoadAnnotation.Location = new System.Drawing.Point(144, 9);
+            this.buttonLoadAnnotation.Name = "buttonLoadAnnotation";
+            this.buttonLoadAnnotation.Size = new System.Drawing.Size(145, 35);
+            this.buttonLoadAnnotation.TabIndex = 11;
+            this.buttonLoadAnnotation.Text = "Load Annotation";
+            this.buttonLoadAnnotation.UseVisualStyleBackColor = true;
+            this.buttonLoadAnnotation.Click += new System.EventHandler(this.buttonLoadAnnotation_Click);
+            // 
+            // buttonAnnotationService
+            // 
+            this.buttonAnnotationService.Location = new System.Drawing.Point(99, 9);
+            this.buttonAnnotationService.Name = "buttonAnnotationService";
+            this.buttonAnnotationService.Size = new System.Drawing.Size(113, 74);
+            this.buttonAnnotationService.TabIndex = 10;
+            this.buttonAnnotationService.Text = "Annotation Service";
+            this.buttonAnnotationService.UseVisualStyleBackColor = true;
+            this.buttonAnnotationService.Click += new System.EventHandler(this.buttonRunService_Click);
+            // 
+            // comboBoxNotes
+            // 
+            this.comboBoxNotes.FormattingEnabled = true;
+            this.comboBoxNotes.Location = new System.Drawing.Point(302, 49);
+            this.comboBoxNotes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.comboBoxNotes.Name = "comboBoxNotes";
+            this.comboBoxNotes.Size = new System.Drawing.Size(180, 28);
+            this.comboBoxNotes.TabIndex = 9;
+            this.comboBoxNotes.SelectedIndexChanged += new System.EventHandler(this.ComboBoxNotes_SelectedIndexChanged);
+            // 
+            // textBoxPatientId
+            // 
+            this.textBoxPatientId.Location = new System.Drawing.Point(144, 49);
+            this.textBoxPatientId.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.textBoxPatientId.Name = "textBoxPatientId";
+            this.textBoxPatientId.Size = new System.Drawing.Size(145, 26);
+            this.textBoxPatientId.TabIndex = 8;
+            this.textBoxPatientId.Text = "598518";
             // 
             // buttonLoadPatient
             // 
-            this.buttonLoadPatient.Location = new System.Drawing.Point(6, 30);
+            this.buttonLoadPatient.Location = new System.Drawing.Point(9, 46);
+            this.buttonLoadPatient.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.buttonLoadPatient.Name = "buttonLoadPatient";
-            this.buttonLoadPatient.Size = new System.Drawing.Size(84, 23);
+            this.buttonLoadPatient.Size = new System.Drawing.Size(126, 35);
             this.buttonLoadPatient.TabIndex = 7;
             this.buttonLoadPatient.Text = "Load Patient";
             this.buttonLoadPatient.UseVisualStyleBackColor = true;
@@ -122,44 +163,13 @@ namespace WTextAnnotator
             // 
             // buttonImportDict
             // 
-            this.buttonImportDict.Location = new System.Drawing.Point(94, 5);
-            this.buttonImportDict.Margin = new System.Windows.Forms.Padding(2);
+            this.buttonImportDict.Location = new System.Drawing.Point(514, 8);
             this.buttonImportDict.Name = "buttonImportDict";
-            this.buttonImportDict.Size = new System.Drawing.Size(100, 23);
+            this.buttonImportDict.Size = new System.Drawing.Size(150, 35);
             this.buttonImportDict.TabIndex = 6;
             this.buttonImportDict.Text = "Import Dictionary";
             this.buttonImportDict.UseVisualStyleBackColor = true;
             this.buttonImportDict.Click += new System.EventHandler(this.buttonImportDict_Click);
-            // 
-            // buttonAnnotateWord
-            // 
-            this.buttonAnnotateWord.Location = new System.Drawing.Point(294, 6);
-            this.buttonAnnotateWord.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonAnnotateWord.Name = "buttonAnnotateWord";
-            this.buttonAnnotateWord.Size = new System.Drawing.Size(59, 21);
-            this.buttonAnnotateWord.TabIndex = 4;
-            this.buttonAnnotateWord.Text = "Run";
-            this.buttonAnnotateWord.UseVisualStyleBackColor = true;
-            this.buttonAnnotateWord.Click += new System.EventHandler(this.buttonAnnotateWord_Click);
-            // 
-            // textBoxKeyword
-            // 
-            this.textBoxKeyword.Location = new System.Drawing.Point(221, 6);
-            this.textBoxKeyword.Margin = new System.Windows.Forms.Padding(2);
-            this.textBoxKeyword.Name = "textBoxKeyword";
-            this.textBoxKeyword.Size = new System.Drawing.Size(59, 20);
-            this.textBoxKeyword.TabIndex = 3;
-            // 
-            // buttonSort
-            // 
-            this.buttonSort.Location = new System.Drawing.Point(357, 3);
-            this.buttonSort.Margin = new System.Windows.Forms.Padding(2);
-            this.buttonSort.Name = "buttonSort";
-            this.buttonSort.Size = new System.Drawing.Size(54, 23);
-            this.buttonSort.TabIndex = 5;
-            this.buttonSort.Text = "Sort";
-            this.buttonSort.UseVisualStyleBackColor = true;
-            this.buttonSort.Click += new System.EventHandler(this.buttonSort_Click);
             // 
             // dataGridView1
             // 
@@ -173,13 +183,12 @@ namespace WTextAnnotator
             this.textCol});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
-            this.dataGridView1.Location = new System.Drawing.Point(460, 62);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
+            this.dataGridView1.Location = new System.Drawing.Point(1017, 95);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 28;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(244, 296);
+            this.dataGridView1.Size = new System.Drawing.Size(426, 455);
             this.dataGridView1.TabIndex = 2;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -213,36 +222,56 @@ namespace WTextAnnotator
             this.textCol.HeaderText = "Text";
             this.textCol.Name = "textCol";
             // 
-            // textBoxPatientId
+            // panel2
             // 
-            this.textBoxPatientId.Location = new System.Drawing.Point(96, 32);
-            this.textBoxPatientId.Name = "textBoxPatientId";
-            this.textBoxPatientId.Size = new System.Drawing.Size(98, 20);
-            this.textBoxPatientId.TabIndex = 8;
-            this.textBoxPatientId.Text = "598518";
+            this.panel2.Controls.Add(this.buttonSort);
+            this.panel2.Controls.Add(this.buttonAnnotationService);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(1017, 3);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(426, 86);
+            this.panel2.TabIndex = 3;
             // 
-            // comboBoxNotes
+            // buttonSort
             // 
-            this.comboBoxNotes.FormattingEnabled = true;
-            this.comboBoxNotes.Location = new System.Drawing.Point(201, 32);
-            this.comboBoxNotes.Name = "comboBoxNotes";
-            this.comboBoxNotes.Size = new System.Drawing.Size(121, 21);
-            this.comboBoxNotes.TabIndex = 9;
-            this.comboBoxNotes.SelectedIndexChanged += new System.EventHandler(ComboBoxNotes_SelectedIndexChanged);
+            this.buttonSort.Location = new System.Drawing.Point(12, 9);
+            this.buttonSort.Name = "buttonSort";
+            this.buttonSort.Size = new System.Drawing.Size(81, 74);
+            this.buttonSort.TabIndex = 5;
+            this.buttonSort.Text = "Sort";
+            this.buttonSort.UseVisualStyleBackColor = true;
+            this.buttonSort.Click += new System.EventHandler(this.buttonSort_Click);
+            // 
+            // textBoxKeyword
+            // 
+            this.textBoxKeyword.Location = new System.Drawing.Point(302, 9);
+            this.textBoxKeyword.Name = "textBoxKeyword";
+            this.textBoxKeyword.Size = new System.Drawing.Size(86, 26);
+            this.textBoxKeyword.TabIndex = 3;
+            // 
+            // buttonAnnotateWord
+            // 
+            this.buttonAnnotateWord.Location = new System.Drawing.Point(406, 9);
+            this.buttonAnnotateWord.Name = "buttonAnnotateWord";
+            this.buttonAnnotateWord.Size = new System.Drawing.Size(88, 32);
+            this.buttonAnnotateWord.TabIndex = 4;
+            this.buttonAnnotateWord.Text = "Run";
+            this.buttonAnnotateWord.UseVisualStyleBackColor = true;
+            this.buttonAnnotateWord.Click += new System.EventHandler(this.buttonAnnotateWord_Click);
             // 
             // MainGui
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(706, 318);
+            this.ClientSize = new System.Drawing.Size(1446, 489);
             this.Controls.Add(this.tableLayoutPanel1);
-            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainGui";
             this.Text = "UAB Text Annotator";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -272,6 +301,9 @@ namespace WTextAnnotator
         private Button buttonLoadPatient;
         public TextBox textBoxPatientId;
         public ComboBox comboBoxNotes;
+        private Button buttonAnnotationService;
+        private Panel panel2;
+        private Button buttonLoadAnnotation;
     }
 }
 

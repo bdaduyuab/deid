@@ -10,14 +10,16 @@ namespace WTextAnnotator.CS.Model
     {
         public int start;
         public int end;
-        public String label;
-        public String text;
+        public string label;
+        public string text;
+        public DateTime datetime;
+        public string source;
 
         public Annotation()
         {
         }
 
-        public Annotation(int start, int end, String label, String text)
+        public Annotation(int start, int end, string label, string text)
         {
             this.start = start;
             this.end = end;

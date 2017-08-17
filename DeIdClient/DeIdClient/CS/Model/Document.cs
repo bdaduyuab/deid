@@ -8,7 +8,7 @@ using System.Xml;
 
 namespace WTextAnnotator.CS.Model
 {
-    class Document
+    public class Document
     {
         public String text;
         public ArrayList annotations;

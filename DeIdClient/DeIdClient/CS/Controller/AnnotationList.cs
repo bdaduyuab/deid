@@ -16,6 +16,11 @@ namespace WTextAnnotator.CS.Controller
         {
             annotations.Add(ann);
         }
+        public void AddRange(ArrayList anns)
+        {
+            annotations.AddRange(anns);
+        }
+
         public ArrayList search(int start, int end)
         {
             ArrayList results = new ArrayList();

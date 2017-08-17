@@ -20,8 +20,6 @@ namespace WTextAnnotator
             String text = gui.textArea.SelectedText;
             String trimStartText = text.TrimStart();
             start += (text.Length - trimStartText.Length);
-
-
             String trimEndText = text.TrimEnd();
 
             end -= (text.Length - trimEndText.Length);
@@ -29,7 +27,8 @@ namespace WTextAnnotator
             if (end > start)
             {
                 Annotation ann = new Annotation(start, end, "PHI", text.Trim());
-                gui.annotatePHI(ann);
+                gui.annotationList.Add(ann);
+                gui.markPHI(ann);
             }
         }
 
