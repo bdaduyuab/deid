@@ -1,7 +1,7 @@
-package deid.classifiers.ml;
+package deid.classifiers.method.ml;
 
 import deid.classifiers.cache.CacheAnnotation;
-import deid.classifiers.ml.train.TrainClassifiersBinary;
+import deid.classifiers.method.ml.train.TrainClassifiersBinary;
 import edu.stanford.nlp.ie.AbstractSequenceClassifier;
 import edu.stanford.nlp.ling.CoreLabel;
 

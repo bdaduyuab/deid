@@ -1,4 +1,4 @@
-package deid.classifiers.dict;
+package deid.classifiers.method.dict;
 
 import java.util.HashMap;
 import java.util.HashSet;

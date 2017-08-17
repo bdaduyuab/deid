@@ -1,10 +1,10 @@
-package deid.classifiers.ml;
+package deid.classifiers.method.ml;
 
 import java.util.List;
 import java.util.Properties;
 
 import deid.Constants;
-import deid.classifiers.ml.train.TrainClassifiersBinary;
+import deid.classifiers.method.ml.train.TrainClassifiersBinary;
 import deid.document.IDocument;
 import deid.document.RecordCorpus;
 import deid.utils.Debug;

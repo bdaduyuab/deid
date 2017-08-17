@@ -1,3 +1,4 @@
+package deid.classifiers.method.ml.train;
 //package deid.classifiers.ml.train;
 //
 //import java.util.List;
@@ -7,13 +8,13 @@
 //import deid.document.IDocument;
 //import deid.document.RecordCorpus;
 //
-//public class TrainClassifiersSubcategory {
+//public class TrainClassifiersCategory {
 //
 //	public static String TRAIN_DIR = deid.Constants.TRAIN;
 //
 //	public static String OUTPUT_DIR = Constants.ML_MODELS;
 //
-//	public static CRFBinaryConfig config = new CRFBinaryConfig("SUBCATEGORY");
+//	public static CRFBinaryConfig config = new CRFBinaryConfig("CATEGORY");
 //
 //	public static void main(String[] args) {
 //
@@ -28,7 +29,7 @@
 //		// recordSet.saveObj();
 //		recordSet.loadObj();
 //
-//		CRFUtil.labelTokensGold(recordSet.documents, "SUBCATEGORY");
+//		CRFUtil.labelTokensGold(recordSet.documents, "CATEGORY");
 //
 //		config.prepareDirBinary(recordSet.documents, "resources/stanford.ner.prop", null);
 //

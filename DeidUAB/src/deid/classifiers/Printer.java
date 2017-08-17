@@ -7,8 +7,8 @@ import java.util.List;
 
 import deid.Constants;
 import deid.anns.IAnnotation;
-import deid.classifiers.ml.CRFAnnotator;
-import deid.classifiers.ml.CRFUtil;
+import deid.classifiers.method.ml.CRFAnnotator;
+import deid.classifiers.method.ml.CRFUtil;
 import deid.document.IDocument;
 import deid.document.IToken;
 import deid.document.RecordCorpus;

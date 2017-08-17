@@ -1,4 +1,4 @@
-package deid.classifiers.ml;
+package deid.classifiers.method.ml;
 
 import java.util.List;
 

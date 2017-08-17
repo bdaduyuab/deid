@@ -1,4 +1,4 @@
-package deid.classifiers.ml.train;
+package deid.classifiers.method.ml.train;
 
 import java.io.File;
 import java.util.ArrayList;

@@ -1,9 +1,9 @@
-package deid.classifiers.ml.train;
+package deid.classifiers.method.ml.train;
 
 import java.util.List;
 
 import deid.Constants;
-import deid.classifiers.ml.CRFUtil;
+import deid.classifiers.method.ml.CRFUtil;
 import deid.document.IDocument;
 import deid.document.RecordCorpus;
 import deid.utils.Debug;

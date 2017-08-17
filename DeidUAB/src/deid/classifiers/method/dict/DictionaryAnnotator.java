@@ -1,10 +1,10 @@
-package deid.classifiers.dict;
+package deid.classifiers.method.dict;
 
 import java.util.List;
 
 import deid.anns.IAnnotation;
 import deid.classifiers.cache.CacheAnnotation;
-import deid.classifiers.ml.CRFUtil;
+import deid.classifiers.method.ml.CRFUtil;
 import deid.document.IDocument;
 import deid.utils.intervaltree.IntervalTree;
 import edu.stanford.nlp.ie.AbstractSequenceClassifier;
